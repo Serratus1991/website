@@ -7,23 +7,17 @@ sections:
 - type: heading
   label: Content
 - type: jekyll-posts
-  label: Posts
+  label: About
   create: all
   templates:
+  - information-yml
   - post
 - type: jekyll-pages
-  label: Pages
+  label: Articles
   create: all
   templates:
   - landing-page
   - page
-- type: directory
-  path: _people
-  label: People
-  create: all
-  match: "*"
-  templates:
-  - person
 - type: directory
   path: _projects
   label: Projects
@@ -34,6 +28,7 @@ sections:
 - type: document
   path: _data/information.yml
   label: Contact Information
+  read_only: true
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
